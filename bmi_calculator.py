@@ -28,14 +28,14 @@ def button_clicked():
 
     try:
         weight = float(entry.get())
-        height = float(entry_2.get())
+        height = float(entry_2.get()) / 100
         bmi = weight / (height**2)
 
         if bmi < 18.5:
             result = "Underweight"
-        elif 18.5 < bmi < 24.9:
+        elif 18.5 <= bmi <= 24.9:
             result = "Normal weight"
-        elif 25.0 < bmi < 29.9:
+        elif 25.0 <= bmi <= 29.9:
             result = "Overweight"
         else:
             result = "Obese"
